@@ -15,43 +15,68 @@ Text Domain: theme-4w4
 Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
 */
 /*Variable CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 :root {
-  --couleur-arriere-entete: white;
+  --couleur-arriere-entete: rgb(82, 63, 63);
   --couleur-arriere-footer: red;
-  --couleur-arriere-lol: black;
-  --couleur-arriere-dk: magenta;
+  --couleur-arriere-galerie: black;
+  --couleur-arriere-acceuil: green;
+  --couleur-arriere-evenement: rgb(0, 191, 255);
 }
 
 /*
 Selecteur de balsie textuel de base
 */
 h1 {
+  font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h2 {
   font-size: clamp(1rem, -0.5rem + 6vw, 3.5rem);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 /*Regle de placements des items*/
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Permanent Marker", cursive;
 }
 
 .global {
   display: flex;
   justify-content: center;
+  min-height: 30vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  width: 1100px;
+  flex: 0 1 900px;
   border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5rem 1rem;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
 }
 
-/*#acceuil{}
-#galerie{}
-#evenement{}
-#footer{}*//*# sourceMappingURL=style.css.map */
+#acceuil {
+  background-color: var(--couleur-arriere-acceuil);
+}
+
+#galerie {
+  background-color: var(--couleur-arriere-galerie);
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+}
+
+/*Import de la font at googleFonts*//*# sourceMappingURL=style.css.map */
