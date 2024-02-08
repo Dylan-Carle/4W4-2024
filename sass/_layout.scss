@@ -13,10 +13,18 @@ body{
 .global > section,
 .global > header,
 .global > footer{
-    flex: 0 1 900px;
+    flex: 0 1 var(--largeurMax);
     border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 5rem 1rem;
+    border-radius: 10px;
+}
+
+.global > section:hover,
+.global > header:hover,
+.global > footer:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 #entete{
