@@ -18,8 +18,7 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
 /*Variable CSS*/
 @import "variable";
 
-/*Normalization des regles css*/
-@import "normalize";
-
-
 @import "base/h";
+
+/*Regle de placements des items*/
+@import "layout";
