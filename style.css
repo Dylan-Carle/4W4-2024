@@ -37,7 +37,7 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
   --s-couleur-arriere: 100%;
   --l-couleur-arriere: 50%;
   --s-couleur: 100%;
-  --l-couleur: 20%;
+  --l-couleur: 80%;
   --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
   --couleur-arriere-footer: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
   --couleur-arriere-galerie: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
@@ -142,5 +142,6 @@ body {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  border: 1px solid black;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
