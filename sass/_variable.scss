@@ -8,17 +8,32 @@
     --couleur-h2: rgba(50, 175, 54, 0.8);
     --largeurMax: 900px;
     */
-    --couleur-arriere-entete: hsl(0, 100%, 50%);
-    --couleur-arriere-footer: hsl(60deg, 100%, 50%);
-    --couleur-arriere-galerie: hsl(120deg, 100%, 50%);
-    --couleur-arriere-acceuil: hsl(180deg, 100%, 50%);
-    --couleur-arriere-evenement: hsl(240deg, 100%, 50%);
+    --nb-element: 5;
+    --increment-angle: calc(360 / var(--nb-element));
+    --angle-initial: 180;
 
-    --couleur-entete: hsl(0, 100%, 90%);
-    --couleur-footer: hsl(60deg, 100%, 15%);
-    --couleur-galerie: hsl(120deg, 100%, 15%);
-    --couleur-acceuil: hsl(180deg, 100%, 15%);
-    --couleur-evenement: hsl(240deg, 100%, 15%);
+    --hu1: var(--angle-initial);
+    --hu2: calc(var(--hu1) + var(--increment-angle));
+    --hu3: calc(var(--hu2) + var(--increment-angle));
+    --hu4: calc(var(--hu3) + var(--increment-angle));
+    --hu5: calc(var(--hu4) + var(--increment-angle));
+
+    --s-couleur-arriere: 100%; //saturation
+    --l-couleur-arriere: 50%;//luminosite
+    --s-couleur: 100%;//saturation
+    --l-couleur: 20%;//luminosite
+
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-footer: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-galerie: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-acceuil: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-evenement: hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-footer: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
+    --couleur-galerie: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
+    --couleur-acceuil: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
+    --couleur-evenement: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
 
     --couleur-h2: rgba(50, 175, 54, 0.8);
     --largeurMax: 900px;
