@@ -10,10 +10,10 @@
     */
     --nb-element: 5;
     --increment-angle: calc(360 / var(--nb-element));
-    --angle-initial: 180;
+    --angle-initial: 224;
 
     --hu1: var(--angle-initial);
-    --hu2: calc(var(--hu1) + var(--increment-angle));
+    --hu2: calc(var(--hu1) + 180);
     --hu3: calc(var(--hu2) + var(--increment-angle));
     --hu4: calc(var(--hu3) + var(--increment-angle));
     --hu5: calc(var(--hu4) + var(--increment-angle));
@@ -23,18 +23,20 @@
     --s-couleur: 100%;//saturation
     --l-couleur: 80%;//luminosite
 
-    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-footer: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-galerie: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-acceuil: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-    --couleur-arriere-evenement: hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+    --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+    --couleur-arriere-acceuil: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
 
-    --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-    --couleur-footer: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-    --couleur-galerie: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-    --couleur-acceuil: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-    --couleur-evenement: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
+    --couleur-entete: hsl(var(--hu2), var(--s-couleur), 60%);
+    --couleur-footer: hsl(var(--hu2), var(--s-couleur), 65%);
+    --couleur-galerie: hsl(var(--hu1), var(--s-couleur), 70%);
+    --couleur-acceuil: hsl(var(--hu2), var(--s-couleur), 75%);
+    --couleur-evenement: hsl(var(--hu2), var(--s-couleur), 80%);
 
-    --couleur-h2: rgba(50, 175, 54, 0.8);
+    --couleur-h2: rgba(0, 0, 0, 0.8);
     --largeurMax: 900px;
+
+    --couleur-arriere-boutons: hsl(var(--hu1), var(--s-couleur-arriere), 90%);
 }

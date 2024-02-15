@@ -28,9 +28,9 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
   */
   --nb-element: 5;
   --increment-angle: calc(360 / var(--nb-element));
-  --angle-initial: 180;
+  --angle-initial: 224;
   --hu1: var(--angle-initial);
-  --hu2: calc(var(--hu1) + var(--increment-angle));
+  --hu2: calc(var(--hu1) + 180);
   --hu3: calc(var(--hu2) + var(--increment-angle));
   --hu4: calc(var(--hu3) + var(--increment-angle));
   --hu5: calc(var(--hu4) + var(--increment-angle));
@@ -38,18 +38,19 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
   --l-couleur-arriere: 50%;
   --s-couleur: 100%;
   --l-couleur: 80%;
-  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-footer: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-galerie: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-acceuil: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-evenement: hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-  --couleur-footer: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-  --couleur-galerie: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-  --couleur-acceuil: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-  --couleur-evenement: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
-  --couleur-h2: rgba(50, 175, 54, 0.8);
+  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+  --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+  --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+  --couleur-arriere-acceuil: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+  --couleur-entete: hsl(var(--hu2), var(--s-couleur), 60%);
+  --couleur-footer: hsl(var(--hu2), var(--s-couleur), 65%);
+  --couleur-galerie: hsl(var(--hu1), var(--s-couleur), 70%);
+  --couleur-acceuil: hsl(var(--hu2), var(--s-couleur), 75%);
+  --couleur-evenement: hsl(var(--hu2), var(--s-couleur), 80%);
+  --couleur-h2: rgba(0, 0, 0, 0.8);
   --largeurMax: 900px;
+  --couleur-arriere-boutons: hsl(var(--hu1), var(--s-couleur-arriere), 90%);
 }
 
 /*
@@ -57,6 +58,7 @@ Selecteur de balsie textuel de base
 */
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -73,13 +75,13 @@ h4 {
 
 h5 {
   font-size: clamp(0.375rem, -1.5rem + 6vw, 1.875rem);
-  color: rgb(155, 59, 0);
+  color: var(--couleur-entete);
 }
 
 h6 {
   font-size: clamp(0.25rem, -1.3906rem + 5.25vw, 1.5625rem);
   text-align: right;
-  color: rgb(77, 255, 0);
+  color: var(--couleur-acceuil);
 }
 
 /*Regle de placements des items*/
@@ -100,21 +102,21 @@ body {
 .global > footer {
   flex: 0 1 var(--largeurMax);
   /*border: 1px solid black;*/
-  background-color: rgba(255, 255, 255, 0.1);
+  /*background-color: rgba(255, 255, 255, 0.1);*/
   padding: 5rem 1rem;
   border-radius: 10px;
 }
 
-.global > section:hover,
+/*.global > section:hover,
 .global > header:hover,
-.global > footer:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
+.global > footer:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}*/
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
+  position: relative;
 }
 
 #acceuil {
@@ -125,11 +127,14 @@ body {
 #galerie {
   background-color: var(--couleur-arriere-galerie);
   color: var(--couleur-galerie);
+  z-index: 1;
+  background: linear-gradient(180deg, var(--couleur-arriere-acceuil), var(--couleur-arriere-evenement));
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
+  position: relative;
 }
 
 #footer {
@@ -137,11 +142,88 @@ body {
   color: var(--couleur-footer);
 }
 
+blockquote p {
+  background-color: var(--couleur-arriere-acceuil);
+  border: 1px solid var(--couleur-acceuil);
+  text-align: center;
+  font-size: 20pt;
+  padding: 2rem;
+}
+
 /*Import de la font at googleFonts*/
 #luffy {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 2px solid lightblue;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/**************Style pour la vague***********************/
+.vague {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(137% + 1.3px);
+  height: 71px;
+}
+
+/*.vague .shape-fill {
+    fill: var(--couleur-arriere-acceuil);
+}*/
+.diagonale {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonale::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur-arriere-galerie);
+  z-index: -1;
+  transform: skewY(-5deg);
+}
+
+.youtube {
+  width: 20vw;
+  height: 10vh;
+  transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  background-color: var(--couleur-arriere-boutons);
+  border: 2px solid var(--couleur-arriere-boutons);
+}
+
+.github {
+  width: 20vw;
+  height: 10vh;
+  transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+  background-color: var(--couleur-arriere-boutons);
+  border: 2px solid var(--couleur-arriere-boutons);
+}
+
+.youtube:hover, .github:hover {
+  transform: scale(1.2);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.lesBoutons {
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+.youtube{
+    width: 20vw;
+    height: 10vh;
+    transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+    background-color: var(--couleur-arriere-boutons);
+    border: 2px solid var(--couleur-arriere-boutons);
+}
+.github{
+    width: 20vw;
+    height: 10vh;
+    transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+    background-color: var(--couleur-arriere-boutons);
+    border: 2px solid var(--couleur-arriere-boutons);
+}
+.youtube:hover, .github:hover{
+    transform: scale(1.2);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+}
+.lesBoutons{
+    display: flex;
+    justify-content: space-around;
+}
