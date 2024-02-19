@@ -39,4 +39,17 @@
     --largeurMax: 900px;
 
     --couleur-arriere-boutons: hsl(var(--hu1), var(--s-couleur-arriere), 90%);
+
+    --couleur-arriere-boutons-bas: hsl(var(--hu1), var(--s-couleur), 70%);
+    --couleur-arriere-boutons-haut: hsl(var(--hu2), var(--s-couleur), 70%);
+
+    --couleur-arriere-boutons-hover-bas: hsl(var(--hu3), var(--s-couleur), 50%);
+    --couleur-arriere-boutons-hover-haut: hsl(var(--hu2), var(--s-couleur), 50%);
+
+    --couleur-arriere-boutons-hover-active-bas: hsl(var(--hu3), var(--s-couleur), 65%);
+    --couleur-arriere-boutons-hover-active-haut: hsl(var(--hu2), var(--s-couleur), 65%);
+
+    --couleur-lien: hsl(var(--hu1), var(--s-couleur), 60%);
+    --couleur-lien-hover: hsl(var(--hu2), var(--s-couleur), 70%);
+    --couleur-lien-visited: hsl(var(--hu3), var(--s-couleur), 70%);
 }

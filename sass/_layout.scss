@@ -19,6 +19,9 @@ body{
     padding: 5rem 1rem;
     border-radius: 10px;
 }
+.global > header{
+    flex: 0 1 1300px;
+}
 
 /*.global > section:hover,
 .global > header:hover,

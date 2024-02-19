@@ -23,3 +23,31 @@
     display: flex;
     justify-content: space-around;
 }
+
+/********** Entete *************/
+.entete__header > button {
+    font-size: clamp(1rem, 0.4375rem + 3vw, 2rem);
+    padding: 10px 30px;
+    border: 2px solid var(--couleur-arriere-entete);
+    transform: scale(1) translateX(0px);
+    color: black;
+    border-radius: 10px;
+    cursor: none;
+    background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
+    transition: background-image 0.5s ease, border 0.5s ease, transform 0.5s ease, cursor 0.5s ease;
+
+    &:hover{
+        background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-bas), var(--couleur-arriere-boutons-hover-haut));
+        border: 2px solid white;
+        transform: scale(1.2) translateX(20px);
+        cursor: pointer;
+    }
+
+    &:active{
+        background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-active-bas), var(--couleur-arriere-boutons-hover-active-haut));
+        border: 2px solid white;
+        color: white;
+        transform: scale(1.2) translateX(20px);
+        cursor: pointer;
+    }
+}
