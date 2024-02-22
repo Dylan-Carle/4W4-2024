@@ -1,0 +1,20 @@
+.sociaux{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.sociaux > a > svg{
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1);
+    transition: transform 0.5s ease, fill 0.5s ease;
+}
+
+.sociaux > a > svg:hover{
+    fill: var(--couleur-footer);
+    transform: scale(1.2);
+    cursor: pointer;
+}

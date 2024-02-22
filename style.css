@@ -58,8 +58,8 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
   --couleur-arriere-boutons-hover-active-bas: hsl(var(--hu3), var(--s-couleur), 65%);
   --couleur-arriere-boutons-hover-active-haut: hsl(var(--hu2), var(--s-couleur), 65%);
   --couleur-lien: hsl(var(--hu1), var(--s-couleur), 60%);
-  --couleur-lien-hover: hsl(var(--hu2), var(--s-couleur), 70%);
-  --couleur-lien-visited: hsl(var(--hu3), var(--s-couleur), 70%);
+  --couleur-hover: hsl(var(--hu2), var(--s-couleur), 70%);
+  --couleur-focus: hsl(var(--hu3), var(--s-couleur), 100%);
 }
 
 /*
@@ -182,10 +182,10 @@ a {
   color: var(--couleur-lien);
 }
 a:hover, a:focus {
-  color: var(--couleur-lien-hover);
+  color: var(--couleur-hover);
 }
-a:visited {
-  color: var(--couleur-lien-visited);
+a:focus {
+  color: var(--couleur-focus);
 }
 
 /*Import de la font at googleFonts*/
@@ -290,4 +290,81 @@ a:visited {
   color: white;
   transform: scale(1.2) translateX(20px);
   cursor: pointer;
+}
+
+.recherche {
+  display: flex;
+  justify-content: space-between;
+  width: 40rem;
+  height: 4rem;
+}
+
+.recherche__input {
+  display: block;
+  width: 85%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid black;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+  background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
+  transition: border 0.5s ease, background 0.5s ease, font-size 0.5s ease;
+}
+
+.recherche__input:hover, .recherche__input:hover ~ button {
+  background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+  font-size: 18pt;
+}
+
+.recherche__input:focus {
+  background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+  border: 2px solid var(--couleur-focus);
+  font-size: 18pt;
+}
+
+.recherche__input:focus ~ button {
+  background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+  font-size: 18pt;
+}
+
+.recherche__button {
+  width: 15%;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid black;
+  border-left: none;
+  background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
+}
+
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.sociaux > a > svg {
+  fill: white;
+  width: 2rem;
+  height: 2rem;
+  transform: scale(1);
+  transition: transform 0.5s ease, fill 0.5s ease;
+}
+
+.sociaux > a > svg:hover {
+  fill: var(--couleur-footer);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#dvd {
+  border-radius: 10px;
+  border: 10px solid white;
+  transform-origin: center;
 }/*# sourceMappingURL=style.css.map */
