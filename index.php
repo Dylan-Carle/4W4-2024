@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="normalize.css"> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
 </head>
 <body>
     <div id="entete" class="global">
@@ -43,9 +43,9 @@
                 //strpos();
                 ?>
                 <div class="carte">
-                    <h5><?php echo $signe ?></h5>
-                    <h4><?php echo trim($titre, $temps)?></h4>
-                    <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+                    <h4><?php echo $signe ?></h5>
+                    <h3><?php echo trim($titre, $temps)?></h4>
+                    <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
                     <h6><?php echo $temps ?></h6>
                 </div>
                 <?php endwhile; ?>

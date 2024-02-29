@@ -1,16 +1,26 @@
 .cours__section{
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    border: 20px solid black;
+    justify-content: space-between;
 }
 
 .carte{
-    border: 2px solid black;
+    border: 2px solid var(--couleur-acceuil);
+    border-radius: 0%;
+    background-color: var(--couleur-galerie);
+    color: var(--couleur-acceuil);
     display: flex;
+    padding: 0 1em;
+    margin-bottom: 2rem;
     flex-direction: column;
-    justify-content: space-between;
     flex-wrap: wrap;
-    flex: 0 1 25%;
-    background-color: black;
+    width: 25%;
+    transition: border 0.5s ease, border-radius 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+.carte:hover{
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    transform: translateY(-1em);
 }
