@@ -1,4 +1,4 @@
-# EXERCISE 1
+# Labo 3
 ## Reproduire et améliorer la maquette présenté en cours
 ## Ajouter des effets de vague et une diagonal
 

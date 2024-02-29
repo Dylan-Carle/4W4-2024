@@ -1,7 +1,8 @@
-.section__cours{
+.cours__section{
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    border: 20px solid black;
 }
 
 .carte{
@@ -11,4 +12,5 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex: 0 1 25%;
+    background-color: black;
 }

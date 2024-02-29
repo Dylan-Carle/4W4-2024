@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theme 4w4</title>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css' ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css' ?>">
+
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
 </head>
 <body>
     <div id="entete" class="global">
@@ -15,7 +18,7 @@
             <h3>TIM - Collège Maisonneuve</h3>
             <button class="entete__button">Événement</button>
             <h5>le (a) est dans l'image</h5>
-            <a href="https://github.com/Dylan-Carle" target="_blank"><img id="luffy" src="images/luffy.jpg" alt="luffy"></a>
+            <a href="https://github.com/Dylan-Carle" target="_blank"><img id="luffy" src="<?php echo get_template_directory_uri() . '/images/luffy.jpg'; ?>" alt="luffy"></a>
         </header>
         <div class="vague">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -30,22 +33,20 @@
             <h6><a href="https://unity.com/" target="_blank">Site de Unity</a></h6>
             <div class="cours__section">
             <?php 
-            // if(have_posts()){
-            //     while(have_posts()){
-            //         the_post();
-            //         the_title('<p>', '<p>');
-            //         the_content();
-            //         $contenu = get_the_content();
-            //         $contenu = wp_trim_words($contenu, 10);
-            //         echo $contenu;
-            //     }
-            // }
-
             if(have_posts()): 
-                while(have_posts()): the_post();?>
+                while(have_posts()): the_post();
+                $titre = get_the_title();
+                $signe = substr($titre, 0, 7);
+                $tempsPos = strpos($titre, "(");
+                $temps = substr($titre, $tempsPos, 6);
+                $titre = substr($titre, 8);
+                //strpos();
+                ?>
                 <div class="carte">
-                    <h3><?php the_title(); ?></h3>
+                    <h5><?php echo $signe ?></h5>
+                    <h4><?php echo trim($titre, $temps)?></h4>
                     <p><?php echo wp_trim_words(get_the_content(), 10); ?></p>
+                    <h6><?php echo $temps ?></h6>
                 </div>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -57,7 +58,7 @@
         <section class="galerie__section">
             <h2>galerie</h2>
             <video width="639px" height="360px" autoplay muted loop id="dvd">
-                <source src="videos/dvd.mp4" type="video/mp4">
+                <source src="<?php echo get_template_directory_uri() . '/videos/dvd.mp4'; ?>" type="video/mp4">
             </video>
         </section>
     </div>
