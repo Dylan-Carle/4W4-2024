@@ -11,11 +11,16 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
 </head>
 <body>
+    <div id="menu">
+        <div class="entete__menu">
+            <?php wp_nav_menu(); ?>
+        </div>
+    </div>
     <div id="entete" class="global">
         <header class="entete__header">
-            <h1>Theme du cours 4w4</h1>
-            <h2>4W4 - Conception d'interface <span> et développement Web</span></h2>
-            <h3>TIM - Collège Maisonneuve</h3>
+            <h1 class="bcg-texte">Theme du cours 4w4</h1>
+            <h2 class="bcg-texte">4W4 - Conception d'interface <span> et développement Web</span></h2>
+            <h3 class="bcg-texte">TIM - Collège Maisonneuve</h3>
             <button class="entete__button">Événement</button>
             <h5>le (a) est dans l'image</h5>
             <a href="https://github.com/Dylan-Carle" target="_blank"><img id="luffy" src="<?php echo get_template_directory_uri() . '/images/luffy.jpg'; ?>" alt="luffy"></a>

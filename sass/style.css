@@ -392,7 +392,7 @@ a:focus {
   margin-bottom: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 25%;
+  flex: 0 1 252.5;
   transition: border 0.5s ease, border-radius 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
 
@@ -402,4 +402,27 @@ a:focus {
   border-radius: 10px;
   color: white;
   transform: translateY(-1em);
+}
+
+.bcg-texte {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+}
+@media screen and (min-width: 1100px) {
+  .bcg-texte {
+    background-color: transparent;
+  }
+}
+
+.menu-entete-container {
+  width: 100%;
+  color: white;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  position: fixed;
 }/*# sourceMappingURL=style.css.map */
