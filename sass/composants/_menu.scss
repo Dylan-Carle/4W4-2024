@@ -13,14 +13,58 @@
 .menu-entete-container{
     width: 100%;
     color: white;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: var(--couleur-arriere-entete);
+    transition: transform 0.5s ease;
+    height: 100vh;
+    @media screen and (min-width: 700px){
+        position: static;
+        transform: translateX(0);
+        height: auto;
+    }
 }
 .menu{
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    padding: 1em;
-    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3em 1em 0 1em;
+    background-color: var(--couleur-arriere-entete);
+    margin: 0;
+    @media screen and (min-width: 700px){
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
-.menu-items{
+.menu-item{
+    color: white;
+    border: 1px solid black;
+    background-color: orange;
+    flex: 1 0 0%;
+    text-align: center;
+}
 
+#chk_burger{
+    display: none;
+}
+
+#burger{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    @media screen and (min-width: 700px){
+        display: none;
+    }
+}
+
+#chk_burger:checked ~ .menu-entete-container{
+    transform: translateX(0);
 }

@@ -7,11 +7,10 @@ body{
 .global{
     display: flex;
     justify-content: center;
-    min-height: 30vh;
+    //min-height: 30vh;
 }
 
 .global > section,
-.global > header,
 .global > footer{
     flex: 0 1 var(--largeurMax);
     /*border: 1px solid black;*/
@@ -19,7 +18,7 @@ body{
     padding: 5rem 1rem;
     border-radius: 10px;
 }
-.global > header{
+.entete__menu, .entete__header{
     flex: 0 1 1300px;
 }
 

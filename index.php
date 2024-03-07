@@ -1,35 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme 4w4</title>
+<?php 
+    //Modele de base index.php
 
-    <!-- <link rel="stylesheet" href="normalize.css"> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
-</head>
-<body>
-    <div id="menu">
-        <div class="entete__menu">
-            <?php wp_nav_menu(); ?>
-        </div>
-    </div>
-    <div id="entete" class="global">
-        <header class="entete__header">
+    get_header();
+?>
+   <div id="entete" class="global">
+        <section class="entete__header">
             <h1 class="bcg-texte">Theme du cours 4w4</h1>
             <h2 class="bcg-texte">4W4 - Conception d'interface <span> et développement Web</span></h2>
             <h3 class="bcg-texte">TIM - Collège Maisonneuve</h3>
             <button class="entete__button">Événement</button>
             <h5>le (a) est dans l'image</h5>
             <a href="https://github.com/Dylan-Carle" target="_blank"><img id="luffy" src="<?php echo get_template_directory_uri() . '/images/luffy.jpg'; ?>" alt="luffy"></a>
-        </header>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-acceuil);"></path>
-            </svg>
-        </div>
+        </section>
+        <?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="acceuil" class="global">
         <section class="acceuil__section">
@@ -71,11 +54,7 @@
         <section class="evenement__section">
             <h2>evenement</h2>
         </section>
-        <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-footer);"></path>
-            </svg>
-        </div>
+        <?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="footer" class="global">
         <footer class="footer__section">

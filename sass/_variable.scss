@@ -52,4 +52,14 @@
     --couleur-lien: hsl(var(--hu1), var(--s-couleur), 60%);
     --couleur-hover: hsl(var(--hu2), var(--s-couleur), 70%);
     --couleur-focus: hsl(var(--hu3), var(--s-couleur), 100%);
+
+
+}
+
+#entete{
+    --couleur-arriere-vague:  hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+}
+
+#evenement{
+    --couleur-arriere-vague: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
 }
