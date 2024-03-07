@@ -1,8 +1,8 @@
-# Labo 3
+# Labo 4
 ## Reproduire et améliorer la maquette présenté en cours
-## Ajouter des effets de vague et une diagonal
+## AJouter un menu de navigation
 
-### Continuer la version du labo2
+### Continuer la version du labo3
  - Amélioration du Dossier saas
  - Ajout dans style.scss
  - Utilisatin de differentes techniques pour elaborer une palette de couleur
@@ -21,7 +21,7 @@ A realiser:
  - Ajouter un bouton
  - Ajouter des liens
  - Améliorer la pagination
- - Ajouter de nouveaux éléments html
+ - Ajouter un menu nav
  - Une github page
 
 Ma GitHub-page 
