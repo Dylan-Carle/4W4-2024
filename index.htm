@@ -6,36 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theme 4w4</title>
 
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="sass/style.css">
-    <!-- <link rel="stylesheet" href="http://localhost/4w4/wp-content/themes/4w4/normalize.css">
-    <link rel="stylesheet" href="http://localhost/4w4/wp-content/themes/4w4/sass/style.css"> -->
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="http://localhost/4w4/wp-content/themes/4w4/normalize.css">
+    <link rel="stylesheet" href="http://localhost/4w4/wp-content/themes/4w4/sass/style.css">
 </head>
 <body>
-    <div id="menu" class="global">
-        <div class="entete__menu">
-            <div class="menu-entete-container"><ul id="menu-entete" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/4w4/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
+    <div id="menu">
+        <header class="entete__menu">
+            <input type="checkbox" id="chk_burger">
+            <label id="burger" for="chk_burger">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </label>
+            <nav class="menu-entete-container"><ul id="menu-entete" class="menu"><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/4w4/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
 <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies émergentes</a></li>
 <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
-<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-35"><a href="http://localhost/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication et dynamique d’une équipe de travail</a></li>
 <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-</ul></div>        </div>
+<li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="#acceuil">Acceuil</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a href="#galerie">Galerie</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="#evenement">Evenement</a></li>
+</ul></nav>        </header>
     </div>
-    <div id="entete" class="global">
-        <header class="entete__header">
+   <div id="entete" class="global">
+        <section class="entete__header">
             <h1 class="bcg-texte">Theme du cours 4w4</h1>
             <h2 class="bcg-texte">4W4 - Conception d'interface <span> et développement Web</span></h2>
             <h3 class="bcg-texte">TIM - Collège Maisonneuve</h3>
             <button class="entete__button">Événement</button>
             <h5>le (a) est dans l'image</h5>
             <a href="https://github.com/Dylan-Carle" target="_blank"><img id="luffy" src="http://localhost/4w4/wp-content/themes/4w4/images/luffy.jpg" alt="luffy"></a>
-        </header>
+        </section>
         <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-acceuil);"></path>
-            </svg>
-        </div>
-    </div>
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path class="remplissage" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-acceuil);"></path>
+    </svg>
+</div>    </div>
     <div id="acceuil" class="global">
         <section class="acceuil__section">
             <h2>acceuil</h2>
@@ -119,11 +124,10 @@
             <h2>evenement</h2>
         </section>
         <div class="vague">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-footer);"></path>
-            </svg>
-        </div>
-    </div>
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path class="remplissage" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--couleur-arriere-acceuil);"></path>
+    </svg>
+</div>    </div>
     <div id="footer" class="global">
         <footer class="footer__section">
             <h2>footer</h2>
