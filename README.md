@@ -1,28 +1,65 @@
-# Labo 4
-## Reproduire et améliorer la maquette présenté en cours
-## AJouter un menu de navigation
+#### Objectifs du TP1:
+Créer un site web pour un club de voyage qui permettra de mettre en valeur les differentes destinations de voyage.
+Réaliser un site WordPress pour un club de voyage. Le club offre à ses membres des voyages vers des destinations originales partout dans le monde.
+Chaque destination est catégorisée pour permettre aux membres de se renseigner de façon spécifique selon leur gout.
+Le design général permettra de mettre en valeur les offres de voyages réservées à ses membres.
+Déployer votre projet sur le serveur Web hosting Canada.
 
-### Continuer la version du labo3
- - Amélioration du Dossier saas
- - Ajout dans style.scss
- - Utilisatin de differentes techniques pour elaborer une palette de couleur
-     - Monochrome(une seul teinte et on fait varier la saturation et la luminosité)
-     - Complémentaire(deux teintes gérer à 180deg)
-     - Triade(trois teintes de +/- 120deg)
- - Utilisation de la regle 60-30-10
- - Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entêtes
- - Création d'un bouton utilisant des variables, la propriété background-image, linear-gradient, le bouton réagit au événement de :hover et :active
- - Création de liens réagissant aux événements :hover, :visited, :focus
- - Amélioration générale de la pagination et ajout de nouveaux éléments html
- 
-A realiser:
- - Améliorer l'entête
- - Ajouter une image
- - Ajouter un bouton
- - Ajouter des liens
- - Améliorer la pagination
- - Ajouter un menu nav
- - Une github page
+#### Catégorie de voyage :
+Grandeur du Groupe :
+o    Voyage en groupe
+o    Voyage en petit comité
+o    Voyage en solo
+o    Types de Voyage :
+Type de voyage :
+o    Aventure
+o    Culturel
+o    Repos
+o    Intime
+o    Sportif
+o    Économique
+o    Luxueux
+o    Paysage
+o    Pleine nature
+
+#### Ce projet vous permettra d'améliorer globalement votre thème existant en y intégrant les éléments suivants: 
+•    Un pied de page
+•    Un design de thème amélioré avec Sass et PHP
+•    Amélioration de l'affichage produit par les modèles:
+o    front-page.php
+o    single.php
+o    category.php
+o    search.php
+o    header.php
+o    footer.php
+•    Une mise en page entièrement adaptative
+
+#### Déroulement du projet
+Les « commits » seront poussés dans le dépôt 4w4 de votre GitHub dans la branche tp1.
+L'ensemble des commits devra s'étaler progressivement à partir de la journée de remise du devis jusqu'à la remise finale du TP.
+Un minimum de 30 commits pour le thème permettra d'évaluer l'évolution de votre projet.
+Le serveur « WHC » Web hosting canada
+Utilisez votre compte «WHC » pour déployer la version finale de votre site.
+Gardez votre environnement de fichiers « WHC » le plus simple possible en retirant tous les éléments non nécessaires.
+__
+Le pied de page: footer.php
+La zone footer permettra d'intégrer des liens conçus à partir de la fonctionnalité «menu» de WordPress.
+Design amélioré
+La pagination globale « layout » du site et les différentes zones de la page: l'entête, le footer et la partie principale « main » de la page devront être bien structurés, clairs, originaux et entièrement adaptatifs.
+
+#### Barème de correction sur 20 points
+Organisation des commits sur GitHub minimum 30 commits pour le thème (5 points)
+•    Minimum de 20 commits étalés sur toute la durée du TP
+•    Messages clairs, spécifiques, préfixés et non redondants
+•    Une branche tp1
+•    Déploiement de votre site sur « WHC »
+•    Un readme.md pour le thème: auteur, titre du projet, description et lien vers votre site sur l’hébergeur « WHC »
+
+Organisation de l'entête, footer et partie principale. Qualité du design et de l'intégration des différents éléments de contenu. Notamment, les articles de destinations de voyage s'affichent de façon optimale. Les modèles: header.php, footer.php, category.php, front-page.php et single.php sont bien structurés et affichent l'information prévue. (10 points)
+
+Design général de la page et organisation de la programmation Sass, PHP. Organisation des menus, bouton burger pour afficher le menu principal pour les petits écrans. Adaptabilité générale du site. En Sass utilisation du mapping de couleurs. (5 points)
 
 Ma GitHub-page 
  - https://dylan-carle.github.io/4W4-2024/
+
+lien vers le serveur distant WHC.ca :
