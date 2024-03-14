@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
 </head>
 <body>
-    <div id="menu">
+    <div id="menu" class="global">
+        <?php echo get_custom_logo(); ?>
         <header class="entete__menu">
             <input type="checkbox" id="chk_burger">
             <label id="burger" for="chk_burger">
