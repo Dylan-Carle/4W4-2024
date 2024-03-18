@@ -16,11 +16,21 @@
                 ?>
                 <div class="carte">
                     <h3><?php the_title(); ?></h4>
-                    <p><?php the_content(); ?></p>
+                    <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
+                    <p><a href="<?php echo get_permalink(); ?>"> La suite </a></p>
                 </div>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+        </section>
+    </div>
+
+    <div id="galerie" class="global diagonale">
+        <section class="galerie__section">
+            <h2>galerie</h2>
+            <video width="639px" height="360px" autoplay muted loop id="dvd">
+                <source src="<?php echo get_template_directory_uri() . '/videos/dvd.mp4'; ?>" type="video/mp4">
+            </video>
         </section>
     </div>
     <div id="evenement" class="global">

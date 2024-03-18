@@ -2,6 +2,9 @@ body{
     display: flex;
     flex-direction: column;
     font-family: 'Permanent Marker', cursive;
+    background-image: url("../images/coucherSoleil.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .global{
@@ -30,7 +33,7 @@ body{
 }*/
 
 #entete{
-    background-color: var(--couleur-arriere-entete);
+    //background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
     position: relative;
 }

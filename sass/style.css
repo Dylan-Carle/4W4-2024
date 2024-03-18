@@ -106,6 +106,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Permanent Marker", cursive;
+  background-image: url("../images/coucherSoleil.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .global {
@@ -133,7 +136,6 @@ body {
     cursor: pointer;
 }*/
 #entete {
-  background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
 }
@@ -170,13 +172,19 @@ blockquote p {
 }
 
 .entete__header {
-  background-image: url("../images/unitylogo.png");
   background-repeat: no-repeat;
   background-position: center right;
 }
 
 .entete__header span {
   display: block;
+}
+
+.custom-logo {
+  width: 100px;
+  height: 100px;
+  padding-left: calc(50% - 50px);
+  padding-top: 2em;
 }
 
 @media screen and (max-width: 800px) {
@@ -392,6 +400,7 @@ a:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 2em;
 }
 
 .carte {
@@ -404,8 +413,13 @@ a:focus {
   margin-bottom: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 0 1 252.5;
+  flex: 1 1 20vh;
+  min-width: 15vw;
   transition: border 0.5s ease, border-radius 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.carte h1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .carte:hover {
@@ -414,6 +428,12 @@ a:focus {
   border-radius: 10px;
   color: white;
   transform: translateY(-1em);
+}
+
+.carte .post-categories {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
 }
 
 .bcg-texte {
@@ -428,13 +448,11 @@ a:focus {
 
 .menu-entete-container {
   width: 100%;
-  color: white;
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
   transform: translateX(-100%);
-  background-color: var(--couleur-arriere-entete);
   transition: transform 0.5s ease;
   height: 100vh;
 }
@@ -453,7 +471,6 @@ a:focus {
   align-items: center;
   justify-content: flex-start;
   padding: 10vh 1em 0 1em;
-  background-color: var(--couleur-arriere-entete);
   margin: 0;
   height: 80%;
   gap: 1em;
@@ -470,7 +487,6 @@ a:focus {
   color: white;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: orange;
   flex: 1 0 0%;
   text-align: center;
   display: flex;
@@ -482,6 +498,15 @@ a:focus {
   .menu-item {
     height: 3em;
   }
+}
+
+.menu-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 #chk_burger {
