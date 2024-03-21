@@ -3,7 +3,7 @@
 
     get_header();
 ?>
-   <div id="entete" class="global">
+   <div id="entete" class="global clr-agencement-primaire">
         <section class="entete__header">
             <h1 class="bcg-texte"><?php echo get_bloginfo("name"); ?></h1>
             <h2 class="bcg-texte"><?php echo get_bloginfo("description"); ?></span></h2>
@@ -19,8 +19,20 @@
             <h2>acceuil</h2>
             <p>Bacon ipsum dolor amet corned beef pork belly prosciutto sausage turducken fatback short ribs filet mignon venison ball tip hamburger. Hamburger cow turkey cupim, fatback pork loin brisket corned beef ground round. Shoulder kevin drumstick, spare ribs ground round chicken meatloaf porchetta t-bone pig pastrami cow fatback leberkas bresaola. Flank tri-tip andouille t-bone.</p>
             <h6><a href="https://unity.com/" target="_blank">Site de Unity</a></h6>
+            <h3>Les Categories</h3>
             <div class="cours__section">
-            <?php 
+            <?php foreach(get_categories() as $categorie): ?>
+                <div class="carte">
+                    <h4><?php echo $categorie->name; ?></h4>
+                    <p><?php echo wp_trim_words($categorie->description, 10); ?></p>
+                    <p><?php echo $categorie->count; ?> destination offertes.</p>
+                    <p><a href="<?php echo get_category_link($categorie->term_id); ?>"> Voir les destination </a></p>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <h3>Les Destinations Populaires</h3>
+            <div class="cours__section">
+            <?php
             if(have_posts()): 
                 while(have_posts()): the_post();
                 //strpos();
