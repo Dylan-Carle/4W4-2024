@@ -63,3 +63,11 @@ Ma GitHub-page
  - https://dylan-carle.github.io/4W4-2024/
 
 lien vers le serveur distant WHC.ca :
+
+Auteur: Dylan Carle
+
+Description du projet:
+- Site web présentant les destinations disponibles à travers le monde. L'utilisateur peut choisir une 
+categorie spécifique à ses préférences ou la nature de son voyage. Le site présente les événements à
+venir, une galerie d'images, une acceuil avec tous les catégories disponibles et une hero page 
+pour introduire l'utilisateur au monde du voyage. Ajout de fond en dégradé.
