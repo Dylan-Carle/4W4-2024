@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
 </head>
 <body>
-    <div id="menu" class="global">
+    <div id="menu" class="global clr-agencement-primaire">
         <header class="entete__menu">
             <!-- Permet de mettre un logo custom a l'aide du customizer -->
             <?php echo get_custom_logo(); ?> 
