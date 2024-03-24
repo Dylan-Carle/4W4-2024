@@ -17,13 +17,14 @@
     top: 0;
     left: 0;
     transform: translateX(-100%);
-    //background-color: var(--couleur-arriere-entete);
+    background-color: var(--couleur-arriere-entete);
     transition: transform 0.5s ease;
     height: 100vh;
     @media screen and (min-width: 700px){
         position: static;
         transform: translateX(0);
         height: auto;
+        background-color: hsla(0, 0%, 0%, 0);
     }
 }
 .menu{
@@ -44,9 +45,6 @@
     }
 }
 .menu-item{
-    color: white;
-    border: 1px solid black;
-    border-radius: 10px;
     //background-color: orange;
     flex: 1 0 0%;
     text-align: center;
@@ -65,8 +63,17 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border-radius: 10px;
+    color: var(--couleur-entete);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    @media screen and (min-width: 700px){
+        color: var(--couleur-lien);
+    }
 }
-
+.menu-item a:hover{
+    background-color: var(--couleur-acceuil);
+    color: white;
+}
 #chk_burger{
     display: none;
 }
