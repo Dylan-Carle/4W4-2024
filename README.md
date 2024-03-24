@@ -70,4 +70,5 @@ Description du projet:
 - Site web présentant les destinations disponibles à travers le monde. L'utilisateur peut choisir une 
 categorie spécifique à ses préférences ou la nature de son voyage. Le site présente les événements à
 venir, une galerie d'images, une acceuil avec tous les catégories disponibles et une hero page 
-pour introduire l'utilisateur au monde du voyage. Ajout de fond en dégradé.
+pour introduire l'utilisateur au monde du voyage. Ajout de fond en dégradé et des catégories de 
+voyages.

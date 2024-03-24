@@ -204,8 +204,8 @@ Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
 }
 
 .clr-agencement-secondaire {
-  color: hsl(40, 100%, 15%);
-  background-color: hsl(40, 100%, 85%);
+  color: hsl(40, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(40, 100%, 30%), hsl(40, 100%, 50%));
 }
 
 .clr-agencement-ternaire {
@@ -223,7 +223,7 @@ Selecteur de balsie textuel de base
 */
 h1 {
   font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
-  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 8px 5px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -254,7 +254,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Permanent Marker", cursive;
-  background-image: url("../images/coucherSoleil.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -322,6 +321,7 @@ blockquote p {
 .entete__header {
   background-repeat: no-repeat;
   background-position: center right;
+  text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .entete__header span {
@@ -356,7 +356,7 @@ a:focus {
   height: 5rem;
   border-radius: 50%;
   border: 2px solid lightblue;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
 /**************Style pour la vague***********************/
@@ -581,7 +581,35 @@ a:focus {
 .carte .post-categories {
   list-style: none;
   display: flex;
+  padding: 0;
+  justify-content: space-evenly;
   flex-grow: 1;
+}
+
+.post-categories li {
+  width: 30%;
+  height: 2em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-categories a {
+  padding: 0.3em;
+  width: 100%;
+  height: 100%;
+  background-color: var(--couleur-acceuil);
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-categories a:hover {
+  background-color: white;
+  color: var(--couleur-acceuil);
 }
 
 .bcg-texte {

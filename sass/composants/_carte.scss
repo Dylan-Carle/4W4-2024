@@ -33,5 +33,30 @@
 .carte .post-categories{
     list-style: none;
     display: flex;
+    padding: 0;
+    justify-content: space-evenly;
     flex-grow: 1;
+}
+.post-categories li{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-categories a {
+    padding: 0.3em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--couleur-acceuil);
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-categories a:hover{
+    background-color: white;
+    color: var(--couleur-acceuil);
 }

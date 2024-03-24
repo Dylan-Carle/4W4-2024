@@ -52,7 +52,7 @@ $defaut: (
 
 $agencement-couleur :(
     primaire: ($--clr-bleu-fonce, ($--clr-bleu-pale, $--clr-bleu-leger)),
-    secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
+    secondaire: ($--clr-orange-pale, ($--clr-orange-moyen, $--clr-orange-leger)),
     ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
     vert: ($--clr-vert-fonce, $--clr-vert-pale)
 );
