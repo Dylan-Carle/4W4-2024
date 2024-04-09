@@ -1,8 +1,12 @@
 .recherche{
     display: flex;
     justify-content: space-between;
-    width: 40rem;
-    height: 4rem;
+    width: 80vw;
+    height: 10vh;
+    @media screen and (min-width: 700px){
+        width: 60vw;
+        height: 10vh;
+    }
 }
 .recherche__input{
     font-size: 18pt;
@@ -34,6 +38,7 @@
     border-left: none;
     background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
     transform: translateX(-100%);
+    cursor: pointer;
     transition: transform 0.5s ease;
 }
 .recherche__input:focus ~ button{

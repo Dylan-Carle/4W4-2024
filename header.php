@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
 </head>
 <body>
-    <div id="menu" class="global clr-agencement-primaire">
+    <div id="menu" class="global">
         <header class="entete__menu">
             <!-- Permet de mettre un logo custom a l'aide du customizer -->
             <?php echo get_custom_logo(); ?> 
@@ -20,6 +20,7 @@
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </label>
             <?php wp_nav_menu(array("container"=>"nav")); ?>
+            <?php //get_search_form(); ?>
             <hr>
         </header>
     </div>

@@ -5,9 +5,7 @@
 ?>
     <div id="acceuil" class="global">
         <section class="acceuil__section">
-            <h2>acceuil</h2>
-            <p>Bacon ipsum dolor amet corned beef pork belly prosciutto sausage turducken fatback short ribs filet mignon venison ball tip hamburger. Hamburger cow turkey cupim, fatback pork loin brisket corned beef ground round. Shoulder kevin drumstick, spare ribs ground round chicken meatloaf porchetta t-bone pig pastrami cow fatback leberkas bresaola. Flank tri-tip andouille t-bone.</p>
-            <h6><a href="https://unity.com/" target="_blank">Site de Unity</a></h6>
+            <h2>Résultat de la recherche</h2>
             <div class="cours__section">
             <?php 
             if(have_posts()): 
@@ -15,9 +13,13 @@
                 //strpos();
                 ?>
                 <div class="carte">
-                    <h3><?php the_title(); ?></h4>
+                    <?php the_post_thumbnail("medium"); ?>
+                    <h4><?php the_title(); ?></h4>
+                    <!-- get_the_title(); == retourne le nom du titre en chaine -->
+                    <!-- the_title(); == fait un echo du titre -->
                     <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
                     <p><a href="<?php echo get_permalink(); ?>"> La suite </a></p>
+                    <?php the_category(); ?>
                 </div>
                 <?php endwhile; ?>
             <?php endif; ?>
@@ -28,16 +30,13 @@
     <div id="galerie" class="global diagonale">
         <section class="galerie__section">
             <h2>galerie</h2>
-            <video width="639px" height="360px" autoplay muted loop id="dvd">
-                <source src="<?php echo get_template_directory_uri() . '/videos/dvd.mp4'; ?>" type="video/mp4">
-            </video>
         </section>
     </div>
     <div id="evenement" class="global">
         <section class="evenement__section">
             <h2>evenement</h2>
         </section>
-        <?php get_template_part("gabarit/vague"); ?>
+        <?php //get_template_part("gabarit/vague"); ?>
     </div>
 
     <?php get_footer(); ?>

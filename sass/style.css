@@ -363,6 +363,12 @@ a:focus {
   border-radius: 50%;
   border: 2px solid lightblue;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+#luffy:hover {
+  filter: grayscale(0%);
 }
 
 /**************Style pour la vague***********************/
@@ -449,13 +455,14 @@ a:focus {
   border-radius: 10px;
   cursor: none;
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
-  transition: background-image 0.5s ease, border 0.5s ease, transform 0.5s ease, cursor 0.5s ease;
+  transition: background-image 0.5s ease, border 0.5s ease, transform 0.5s ease, cursor 0.5s ease, box-shadow 0.5s ease;
 }
 .entete__header > button:hover {
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-bas), var(--couleur-arriere-boutons-hover-haut));
   border: 2px solid white;
   transform: scale(1.2) translateX(20px);
   cursor: pointer;
+  box-shadow: 0px 0px 10px white;
 }
 .entete__header > button:active {
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-active-bas), var(--couleur-arriere-boutons-hover-active-haut));
@@ -468,8 +475,14 @@ a:focus {
 .recherche {
   display: flex;
   justify-content: space-between;
-  width: 40rem;
-  height: 4rem;
+  width: 80vw;
+  height: 10vh;
+}
+@media screen and (min-width: 700px) {
+  .recherche {
+    width: 60vw;
+    height: 10vh;
+  }
 }
 
 .recherche__input {
@@ -505,6 +518,7 @@ a:focus {
   border-left: none;
   background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
   transform: translateX(-100%);
+  cursor: pointer;
   transition: transform 0.5s ease;
 }
 
@@ -516,7 +530,7 @@ a:focus {
 .sociaux {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 5vw;
   margin-top: 2rem;
 }
 
@@ -541,6 +555,10 @@ a:focus {
   align-items: center;
 }
 
+footer blockquote {
+  width: 60vw;
+}
+
 #dvd {
   border-radius: 10px;
   border: 10px solid white;
@@ -553,7 +571,7 @@ a:focus {
 .cours__section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 2em;
 }
 
@@ -567,29 +585,33 @@ a:focus {
   margin-bottom: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 1 1 20vh;
-  min-width: 15vw;
-  transition: border 0.5s ease, border-radius 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  flex: 0 1 20vw;
+  min-width: 25vw;
+  transition: border-radius 0.5s ease, transform 0.5s ease;
 }
 
-.carte h1 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+.carte h4 {
+  font-size: clamp(0.5rem, 3vw, 2rem);
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.carte p {
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 .carte:hover {
   cursor: pointer;
-  border: 2px solid white;
   border-radius: 10px;
-  color: white;
-  transform: translateY(-1em);
+  transform: scale(1.1);
 }
 
 .carte .post-categories {
   list-style: none;
   display: flex;
   padding: 0;
+  align-items: center;
   justify-content: space-evenly;
-  flex-grow: 1;
 }
 
 .post-categories li {
@@ -611,11 +633,79 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 
 .post-categories a:hover {
   background-color: white;
   color: var(--couleur-acceuil);
+}
+
+.categorie {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 150%;
+  filter: grayscale(0%);
+  box-shadow: inset 0px 0px 15px white;
+  transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
+}
+@media screen and (min-width: 700px) {
+  .categorie {
+    filter: grayscale(100%);
+  }
+}
+
+.categorie:hover {
+  background-size: auto 100%;
+  filter: grayscale(0%);
+}
+
+.categorie:first-of-type {
+  background-image: url("../images/aventure.jpg");
+}
+
+.categorie:nth-of-type(2) {
+  background-image: url("../images/croisiere.jpeg");
+}
+
+.categorie:nth-of-type(3) {
+  background-image: url("../images/culturel.jpg");
+}
+
+.categorie:nth-of-type(4) {
+  background-image: url("../images/econo.jpg");
+}
+
+.categorie:nth-of-type(5) {
+  background-image: url("../images/jungle.png");
+}
+
+.categorie:nth-of-type(6) {
+  background-image: url("../images/populaire.jpg");
+}
+
+.categorie:nth-of-type(7) {
+  background-image: url("../images/repos.jpg");
+}
+
+.categorie:nth-of-type(8) {
+  background-image: url("../images/sport.jpg");
+}
+
+.categorie:nth-of-type(9) {
+  background-image: url("../images/voyage-groupe.jpg");
+}
+
+.categorie:nth-of-type(10) {
+  background-image: url("../images/seul.jpg");
+}
+
+.categorie:nth-of-type(11) {
+  background-image: url("../images/famille.jpg");
+}
+
+.categorie:nth-of-type(12) {
+  background-image: url("../images/zen.jpg");
 }
 
 /*.bcg-texte{
@@ -664,16 +754,70 @@ a:focus {
   }
 }
 
-.menu-item {
+#menu {
+  background-image: url("../images/nav.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 0px 10px black;
+}
+
+#menu-footer {
+  padding: 0px;
+}
+@media screen and (min-width: 700px) {
+  #menu-footer {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+  }
+}
+
+#menu-footer li {
+  width: 50vw;
+  height: 20vh;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-size 0.5s ease;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, box-shadow 0.5s ease;
+}
+@media screen and (min-width: 700px) {
+  #menu-footer li {
+    height: 20vh;
+    width: 18vw;
+  }
+}
+
+#menu-footer li:hover {
+  filter: grayscale(0%);
+  box-shadow: inset 0px 0px 10px black;
+}
+
+#menu-footer li:nth-child(1) {
+  background-image: url("../images/airtransat.jpg");
+}
+
+#menu-footer li:nth-child(2) {
+  background-image: url("../images/aircanada.jpg");
+}
+
+#menu-footer li:nth-child(3) {
+  background-image: url("../images/sunwing.png");
+}
+
+#menu-entete .menu-item {
   flex: 1 0 0%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
+  text-shadow: 2px 2px black;
 }
 @media screen and (min-width: 700px) {
-  .menu-item {
+  #menu-entete .menu-item {
     height: 3em;
   }
 }
@@ -687,17 +831,18 @@ a:focus {
   text-decoration: none;
   border-radius: 10px;
   color: var(--couleur-entete);
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 @media screen and (min-width: 700px) {
   .menu-item a {
-    color: var(--couleur-lien);
+    color: var(--couleur-entete);
   }
 }
 
-.menu-item a:hover {
+#menu-entete li a:hover {
   background-color: var(--couleur-acceuil);
   color: white;
+  box-shadow: 0px 0px 10px var(--couleur-acceuil);
 }
 
 #chk_burger {
@@ -725,6 +870,7 @@ a:focus {
   height: 100%;
   transition: transform 0.5s ease;
   transform: rotate(0deg);
+  color: var(--couleur-acceuil);
 }
 
 #chk_burger:checked ~ .menu-entete-container {

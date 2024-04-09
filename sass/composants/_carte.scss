@@ -1,7 +1,7 @@
 .cours__section{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 2em;
 }
 
@@ -15,27 +15,30 @@
     margin-bottom: 2rem;
     flex-direction: column;
     flex-wrap: wrap;
-    flex: 1 1 20vh;
-    min-width: 15vw;
-    transition: border 0.5s ease, border-radius 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    flex: 0 1 20vw;
+    min-width: 25vw;
+    transition: border-radius 0.5s ease, transform 0.5s ease;
 }
-.carte h1{
-    font-size: clamp(1.5rem, 2vw, 2rem);
+.carte h4{
+    font-size: clamp(0.5rem, 3vw, 2rem);
+    display: flex;
+    flex: 1 0 auto;
+}
+.carte p{
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
 .carte:hover{
     cursor: pointer;
-    border: 2px solid white;
     border-radius: 10px;
-    color: white;
-    transform: translateY(-1em);
+    transform: scale(1.1);
 }
 
 .carte .post-categories{
     list-style: none;
     display: flex;
     padding: 0;
+    align-items: center;
     justify-content: space-evenly;
-    flex-grow: 1;
 }
 .post-categories li{
     width: 30%;
@@ -55,8 +58,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
 }
 .post-categories a:hover{
     background-color: white;
     color: var(--couleur-acceuil);
+}
+
+.categorie{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 150%;
+    filter: grayscale(0%);
+    box-shadow: inset 0px 0px 15px white;
+    transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
+
+    @media screen and (min-width: 700px){
+        filter: grayscale(100%);
+    }
+}
+.categorie:hover{
+    background-size: auto 100%;
+    filter: grayscale(0%);
+}
+.categorie:first-of-type{
+    background-image: url("../images/aventure.jpg");
+}
+.categorie:nth-of-type(2){
+    background-image: url("../images/croisiere.jpeg");
+}
+.categorie:nth-of-type(3){
+    background-image: url("../images/culturel.jpg");
+}
+.categorie:nth-of-type(4){
+    background-image: url("../images/econo.jpg");
+}
+.categorie:nth-of-type(5){
+    background-image: url("../images/jungle.png");
+}
+.categorie:nth-of-type(6){
+    background-image: url("../images/populaire.jpg");
+}
+.categorie:nth-of-type(7){
+    background-image: url("../images/repos.jpg");
+}
+.categorie:nth-of-type(8){
+    background-image: url("../images/sport.jpg");
+}
+.categorie:nth-of-type(9){
+    background-image: url("../images/voyage-groupe.jpg");
+}
+.categorie:nth-of-type(10){
+    background-image: url("../images/seul.jpg");
+}
+.categorie:nth-of-type(11){
+    background-image: url("../images/famille.jpg");
+}
+.categorie:nth-of-type(12){
+    background-image: url("../images/zen.jpg");
 }
