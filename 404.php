@@ -13,8 +13,10 @@
             </section>
             <img src="http://localhost/4w4/wp-content/uploads/2024/04/404.jpg" alt=":(">
         </div>
+        <div class="recherche_introuvable">
+            <?php get_search_form(); ?>
+        </div>
         <div class="lesCats">
-        <?php get_search_form(); ?>
                 <?php foreach(get_categories() as $categorie): ?>
                     <p><a href="<?php echo get_category_link($categorie->term_id); ?>"> <?php echo $categorie->name; ?> </a></p>
                 <?php endforeach; ?>

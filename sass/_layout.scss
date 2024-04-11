@@ -79,7 +79,10 @@ blockquote{
     background-color: var(--couleur-arriere-acceuil);
     color: var(--couleur-acceuil);
     font-size: 20pt;
-    padding: 5rem;
+    padding: 5rem 5rem 2rem 5rem;
+    @media screen and (min-width: 700px){
+        padding: 5rem;
+    }
     flex: 1 0 100%;
 }
 .introuvable > img{
@@ -118,4 +121,13 @@ blockquote{
     text-decoration: none;
     font-size: 1.5rem;
     color: var(--couleur-acceuil);
+}
+.recherche_introuvable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+    @media screen and (min-width: 700px){
+        padding: 0 5rem 5rem 5rem;
+    }
 }
