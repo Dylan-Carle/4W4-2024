@@ -62,7 +62,9 @@ Design général de la page et organisation de la programmation Sass, PHP. Organ
 Ma GitHub-page 
  - https://dylan-carle.github.io/4W4-2024/
 
-lien vers le serveur distant WHC.ca :
+lien vers le serveur distant WHC.ca : https://gftnth00.mywhc.ca/tim33/
+
+Clud de voyage: PalmDay
 
 Auteur: Dylan Carle
 
