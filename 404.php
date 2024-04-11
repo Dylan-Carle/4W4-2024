@@ -10,15 +10,6 @@
             <h6><a href="<?php get_bloginfo("url") ?>" target="_blank">Page d'acceuil</a></h6>
         </section>
     </div>
-
-    <div id="galerie" class="global diagonale">
-        <section class="galerie__section">
-            <h2>galerie</h2>
-            <video width="639px" height="360px" autoplay muted loop id="dvd">
-                <source src="<?php echo get_template_directory_uri() . '/videos/dvd.mp4'; ?>" type="video/mp4">
-            </video>
-        </section>
-    </div>
     <div id="evenement" class="global">
         <section class="evenement__section">
             <h2>evenement</h2>

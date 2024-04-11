@@ -1,4 +1,4 @@
-#### Objectifs du TP1:
+#### Objectifs du TP2:
 Créer un site web pour un club de voyage qui permettra de mettre en valeur les differentes destinations de voyage.
 Réaliser un site WordPress pour un club de voyage. Le club offre à ses membres des voyages vers des destinations originales partout dans le monde.
 Chaque destination est catégorisée pour permettre aux membres de se renseigner de façon spécifique selon leur gout.
