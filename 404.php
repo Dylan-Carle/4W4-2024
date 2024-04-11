@@ -18,7 +18,7 @@
         </div>
         <div class="lesCats">
                 <?php foreach(get_categories() as $categorie): ?>
-                    <p><a href="<?php echo get_category_link($categorie->term_id); ?>"> <?php echo $categorie->name; ?> </a></p>
+                    <h5><a href="<?php echo get_category_link($categorie->term_id); ?>"> <?php echo $categorie->name; ?> </a></h5>
                 <?php endforeach; ?>
             </div>
     </div>
