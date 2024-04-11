@@ -33,4 +33,6 @@ hr{
         display: block;
     }
 }
-p{}
+p{
+    font-size: clamp(0.5rem, 0.4375rem + 1.5vw, 1.5rem);
+}

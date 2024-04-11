@@ -1,6 +1,8 @@
 a {
     color: var(--couleur-lien);
-    
+    @media screen and (min-width: 700px){
+        text-decoration: none;   
+    }
     &:hover, &:focus{
         color: var(--couleur-hover);
     }

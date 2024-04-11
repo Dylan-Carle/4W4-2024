@@ -260,6 +260,10 @@ hr {
   }
 }
 
+p {
+  font-size: clamp(0.5rem, 0.4375rem + 1.5vw, 1.5rem);
+}
+
 /*Regle de placements des items*/
 body {
   display: flex;
@@ -329,6 +333,67 @@ blockquote p {
   padding: 2rem;
 }
 
+.erreur {
+  display: flex;
+  flex-direction: column;
+}
+
+.introuvable {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  height: 80vh;
+  background-color: var(--couleur-arriere-acceuil);
+  color: var(--couleur-acceuil);
+  font-size: 20pt;
+  padding: 5rem;
+  flex: 1 0 100%;
+}
+
+.introuvable > img {
+  height: auto;
+  width: 40vw;
+  display: none;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
+}
+@media screen and (min-width: 700px) {
+  .introuvable > img {
+    display: block;
+  }
+}
+
+.introuvable > .acceuil__section > h2 {
+  text-shadow: 5px 5px 40px var(--couleur-acceuil);
+}
+
+.acceuil__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lesCats {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  padding: 0px 5rem 5rem 5rem;
+  justify-content: space-between;
+}
+@media screen and (min-width: 700px) {
+  .lesCats {
+    justify-content: flex-start;
+  }
+}
+
+.lesCats > a {
+  background-color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--couleur-acceuil);
+}
+
 .entete__header {
   background-repeat: no-repeat;
   background-position: center right;
@@ -348,6 +413,11 @@ blockquote p {
 
 a {
   color: var(--couleur-lien);
+}
+@media screen and (min-width: 700px) {
+  a {
+    text-decoration: none;
+  }
 }
 a:hover, a:focus {
   color: var(--couleur-hover);
@@ -446,29 +516,29 @@ a:focus {
 }
 
 /********** Entete *************/
-.entete__header > button {
+.entete__button {
   font-size: clamp(1rem, 0.4375rem + 3vw, 2rem);
   padding: 10px 30px;
   border: 2px solid var(--couleur-arriere-entete);
-  transform: scale(1) translateX(0px);
+  transform: scale(1) translateY(0px);
   color: black;
   border-radius: 10px;
   cursor: none;
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
   transition: background-image 0.5s ease, border 0.5s ease, transform 0.5s ease, cursor 0.5s ease, box-shadow 0.5s ease;
 }
-.entete__header > button:hover {
+.entete__button:hover {
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-bas), var(--couleur-arriere-boutons-hover-haut));
   border: 2px solid white;
-  transform: scale(1.2) translateX(20px);
+  transform: scale(1.2) translateY(-2px);
   cursor: pointer;
   box-shadow: 0px 0px 10px white;
 }
-.entete__header > button:active {
+.entete__button:active {
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-hover-active-bas), var(--couleur-arriere-boutons-hover-active-haut));
   border: 2px solid white;
   color: white;
-  transform: scale(1.2) translateX(20px);
+  transform: scale(1.2) translateY(-2px);
   cursor: pointer;
 }
 
