@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/style.css'; ?>">
+    <?php wp_head(); ?>
 </head>
 <body>
     <div id="menu" class="global">
