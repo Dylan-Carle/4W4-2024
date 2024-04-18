@@ -23,3 +23,4 @@
             <p>@Dylan Carle - TIM Maisonneuve 2024</p>
         </footer>
     </div>
+    <?php wp_footer(); ?>

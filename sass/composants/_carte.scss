@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     flex: 0 1 20vw;
     min-width: 25vw;
-    transition: border-radius 0.5s ease, transform 0.5s ease;
+    //transition: border-radius 0.5s ease, transform 0.5s ease;
 }
 .carte h4{
     font-size: clamp(0.5rem, 3vw, 2rem);
@@ -27,11 +27,11 @@
 .carte p{
     font-size: clamp(0.5rem, 3vw, 1.5rem);
 }
-.carte:hover{
+/*.carte:hover{
     cursor: pointer;
     border-radius: 10px;
     transform: scale(1.1);
-}
+}*/
 
 .carte .post-categories{
     list-style: none;
