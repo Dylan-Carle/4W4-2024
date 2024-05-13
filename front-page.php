@@ -18,16 +18,13 @@
                 <?php
                 if(have_posts()): 
                     while(have_posts()): the_post();
-                    //strpos();
+                    //strpos 
+                        $ma_categorie = "carte";
+                        if(in_category("galerie")){
+                            $ma_categorie = "galerie";
+                        }
+                        get_template_part("gabarit/categorie", $ma_categorie);
                     ?>
-                    <div class="carte">
-                        <h4><?php the_title(); ?></h4>
-                        <!-- get_the_title(); == retourne le nom du titre en chaine -->
-                        <!-- the_title(); == fait un echo du titre -->
-                        <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-                        <p><a href="<?php echo get_permalink(); ?>"> La suite </a></p>
-                        <?php the_category(); ?>
-                    </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
@@ -37,6 +34,7 @@
     <div id="galerie" class="global diagonale">
         <section class="galerie__section">
             <h2>galerie</h2>
+            <?php echo do_shortcode('[em_destination]'); ?>
         </section>
     </div>
     <div id="evenement" class="global">
