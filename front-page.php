@@ -41,14 +41,7 @@
         <section class="evenement__section">
             <h2>Les Destinations par categorie</h2>
             <div class="cours__section">
-            <?php foreach(get_categories() as $categorie): ?>
-                <div class="carte categorie">
-                    <h4><?php echo $categorie->name; ?></h4>
-                    <p><?php echo wp_trim_words($categorie->description, 10); ?></p>
-                    <p><?php echo $categorie->count; ?> destinations offertes.</p>
-                    <p><a href="<?php echo get_category_link($categorie->term_id); ?>"> Voir les destination </a></p>
-                </div>
-                <?php endforeach; ?>
+                <?php get_template_part("gabarit/categorie"); ?>
             </div>
         </section>
         <?php //get_template_part("gabarit/vague"); ?>
