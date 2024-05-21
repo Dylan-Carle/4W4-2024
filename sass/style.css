@@ -420,10 +420,9 @@ blockquote p {
 }
 
 .custom-logo {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 8vw;
   padding-left: calc(50% - 50px);
-  padding-top: 2em;
 }
 
 a {
@@ -652,6 +651,13 @@ a:focus {
   cursor: pointer;
 }
 
+#footer {
+  background-image: url("../images/palmbeach.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .footer__section {
   display: flex;
   flex-direction: column;
@@ -689,8 +695,7 @@ footer blockquote {
   margin-bottom: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 0 1 20vw;
-  min-width: 25vw;
+  flex: 0 1 30vw;
 }
 
 .carte h4 {
@@ -977,7 +982,7 @@ footer blockquote {
 #burger {
   display: block;
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: 10;
   height: 10%;
@@ -1004,4 +1009,11 @@ footer blockquote {
 
 #chk_burger:checked + #burger > svg {
   transform: rotate(90deg);
+}
+
+.logo__entete {
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
