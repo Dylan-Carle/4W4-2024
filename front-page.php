@@ -7,7 +7,7 @@
         <section class="entete__header">
             <h1 class="bcg-texte"><?php echo get_bloginfo("name"); ?></h1>
             <h2 class="bcg-texte"><?php echo get_bloginfo("description"); ?></span></h2>
-            <button class="entete__button">Événement</button>
+            <button class="entete__button"><a href="http://localhost/4w4/conference/">Événement</a></button>
         </section>
         <?php get_template_part("gabarit/vague"); ?>
     </div>

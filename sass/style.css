@@ -300,6 +300,14 @@ body {
 #entete {
   color: var(--couleur-entete);
   position: relative;
+  background-image: url("../images/plage-gif.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  /*@media screen and (min-width: 700px){
+      background-position: center;
+  }*/
 }
 
 #acceuil {
@@ -410,9 +418,8 @@ blockquote p {
 }
 
 .entete__header {
-  background-repeat: no-repeat;
-  background-position: center right;
   text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0;
 }
 
 .entete__header span {
@@ -542,6 +549,7 @@ a:focus {
   transform: scale(1) translateY(0px);
   color: black;
   border-radius: 10px;
+  padding: 0;
   cursor: none;
   background-image: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
   transition: background-image 0.5s ease, border 0.5s ease, transform 0.5s ease, cursor 0.5s ease, box-shadow 0.5s ease;
@@ -695,7 +703,8 @@ footer blockquote {
   margin-bottom: 2rem;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 0 1 30vw;
+  flex: 0 1 25vw;
+  min-width: 300px;
 }
 
 .carte h4 {
@@ -881,6 +890,7 @@ footer blockquote {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 1em 1em 0 1em;
   }
 }
 
@@ -1016,4 +1026,10 @@ footer blockquote {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.site__main {
+  background-color: var(--couleur-arriere-acceuil);
+  color: var(--couleur-acceuil);
+  padding: 10vw;
 }/*# sourceMappingURL=style.css.map */
