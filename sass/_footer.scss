@@ -1,0 +1,15 @@
+#footer{
+    background-image: url("../images/palmbeach.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.footer__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+footer blockquote{
+    width: 60vw;
+}

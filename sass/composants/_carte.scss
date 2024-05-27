@@ -1,0 +1,140 @@
+.cours__section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.carte{
+    border: 2px solid var(--couleur-acceuil);
+    border-radius: 0%;
+    background-color: var(--couleur-galerie);
+    color: var(--couleur-acceuil);
+    display: flex;
+    padding: 0 1em;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 1 25vw;
+    min-width: 300px;
+    //transition: border-radius 0.5s ease, transform 0.5s ease;
+}
+.carte h4{
+    font-size: clamp(0.5rem, 3vw, 2rem);
+    display: flex;
+    flex: 1 0 auto;
+}
+.carte p{
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
+}
+/*.carte:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    transform: scale(1.1);
+}*/
+
+.carte .post-categories{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.carte p a {
+    position: relative;
+}
+.carte p a::before{
+    content: "";
+    background-color: var(--couleur-lien);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: 50%;
+    bottom: 0%;
+    height: 3px;
+    border-radius: 10px;
+    transition: left 0.2s ease, right 0.2s ease;
+}
+
+.carte p a:hover::before{
+    left: 0%;
+    right: 0%;
+    background-color: var(--couleur-acceuil);
+}
+.post-categories li{
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-categories a {
+    padding: 0.3em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--couleur-acceuil);
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+.post-categories a:hover{
+    background-color: white;
+    color: var(--couleur-acceuil);
+}
+
+.categorie{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 150%;
+    filter: grayscale(0%);
+    box-shadow: inset 0px 0px 15px white;
+    transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
+
+    @media screen and (min-width: 700px){
+        filter: grayscale(100%);
+    }
+}
+.categorie:hover{
+    background-size: auto 100%;
+    filter: grayscale(0%);
+}
+.categorie:first-of-type{
+    background-image: url("../images/aventure.jpg");
+}
+.categorie:nth-of-type(2){
+    background-image: url("../images/croisiere.jpeg");
+}
+.categorie:nth-of-type(3){
+    background-image: url("../images/culturel.jpg");
+}
+.categorie:nth-of-type(4){
+    background-image: url("../images/econo.jpg");
+}
+.categorie:nth-of-type(5){
+    background-image: url("../images/jungle.png");
+}
+.categorie:nth-of-type(6){
+    background-image: url("../images/populaire.jpg");
+}
+.categorie:nth-of-type(7){
+    background-image: url("../images/repos.jpg");
+}
+.categorie:nth-of-type(8){
+    background-image: url("../images/sport.jpg");
+}
+.categorie:nth-of-type(9){
+    background-image: url("../images/voyage-groupe.jpg");
+}
+.categorie:nth-of-type(10){
+    background-image: url("../images/seul.jpg");
+}
+.categorie:nth-of-type(11){
+    background-image: url("../images/famille.jpg");
+}
+.categorie:nth-of-type(12){
+    background-image: url("../images/zen.jpg");
+}

@@ -1,0 +1,24 @@
+/**************Style pour la vague***********************/
+.vague {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.vague svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 71px;
+}
+
+.remplissage{
+    fill: var(--couleur-arriere-vague);
+}
+/*.vague .shape-fill {
+    fill: var(--couleur-arriere-acceuil);
+}*/

@@ -1,0 +1,161 @@
+// <div class="entete__menu">
+//     //generer par wp_nav_menu()
+//     <div class="menu-entete-container">
+//         <ul id="menu-entete" class="menu">
+//             <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/4w4/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
+//             <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies émergentes</a></li>
+//             <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
+//             <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-35"><a href="http://localhost/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication et dynamique d’une équipe de travail</a></li>
+//             <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
+//         </ul>
+//     </div>
+// </div>
+.menu-entete-container{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: var(--couleur-arriere-entete);
+    transition: transform 0.5s ease;
+    height: 100vh;
+    @media screen and (min-width: 700px){
+        position: static;
+        transform: translateX(0);
+        height: auto;
+        background-color: hsla(0, 0%, 0%, 0);
+    }
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10vh 1em 0 1em;
+    //background-color: var(--couleur-arriere-entete);
+    margin: 0;
+    height: 80%;
+    gap: 1em;
+    @media screen and (min-width: 700px){
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1em 1em 0 1em;
+    }
+}
+#menu{
+    background-image: url("../images/nav.jpeg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px 0px 10px black;
+}
+#menu-footer{
+    padding: 0px;
+
+    @media screen and (min-width: 700px){
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1em;
+        
+    }
+}
+#menu-footer li{
+    width: 50vw;
+    height: 20vh;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-size 0.5s ease;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, box-shadow 0.5s ease;
+    @media screen and (min-width: 700px){
+        height: 20vh;
+        width: 18vw;
+    }
+}
+#menu-footer li:hover{
+    filter: grayscale(0%);
+    box-shadow: inset 0px 0px 10px black;
+}
+#menu-footer li:nth-child(1){
+    background-image: url("../images/airtransat.jpg");
+}
+#menu-footer li:nth-child(2){
+    background-image: url("../images/aircanada.jpg");
+}
+
+#menu-footer li:nth-child(3){
+    background-image: url("../images/sunwing.png");
+}
+#menu-entete .menu-item{
+    //background-color: orange;
+    flex: 1 0 0%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    text-shadow: 2px 2px black;
+    @media screen and (min-width: 700px){
+        height: 3em;
+    }
+}
+.menu-item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--couleur-entete);
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    @media screen and (min-width: 700px){
+        color: var(--couleur-entete);
+    }
+}
+#menu-entete li a:hover{
+    background-color: var(--couleur-acceuil);
+    color: white;
+    box-shadow: 0px 0px 10px var(--couleur-acceuil);
+}
+#chk_burger{
+    display: none;
+}
+
+#burger{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+    height: 10%;
+    width: 10%;
+    min-width: 2em;
+    @media screen and (min-width: 700px){
+        display: none;
+    }
+}
+#burger > svg{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+    color: var(--couleur-acceuil);
+}
+#chk_burger:checked ~ .menu-entete-container{
+    transform: translateX(0);
+}
+
+#chk_burger:checked + #burger > svg{
+    transform: rotate(90deg);
+}
+.logo__entete{
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

@@ -1,5 +1,5 @@
 /*
-Theme Name: theme-4w4
+Theme Name: TP2
 Theme URI: https://referenced.ca
 Author: Dylan Carle
 Author URI: https://wordpress.org/
@@ -11,15 +11,45 @@ Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-4w4
+Text Domain: TP2
 Ce theme a ete devolopper dans le cadre du cours 4w4 Maisonneuve TIM
 */
 
 /*Variable CSS*/
-@import "variable";
-
-/*Normalization des regles css*/
-@import "normalize";
-
+@import "couleurs";
+@import "couleurs-class";
 
 @import "base/h";
+
+/*Regle de placements des items*/
+@import "layout";
+
+@import "entete";
+
+@import "base/lien";
+/*Import de la font at googleFonts*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import "base/image";
+
+@import "effets/vague";
+
+@import "effets/diagonale";
+
+@import "base/boutons";
+
+@import "composants/recherche";
+
+@import "composants/sociaux";
+
+@import "footer";
+
+@import "base/video";
+
+@import "composants/carte";
+
+@import "utile/local";
+
+@import "composants/menu";
+
+@import "base/evenement";

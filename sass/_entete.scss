@@ -1,0 +1,22 @@
+.entete__header{
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    //background-image: linear-gradient(90deg, var(bck-secondaire-100), var(bck-secondaire-200));
+}
+
+.entete__header span{
+    display: block;
+}
+
+.custom-logo{
+    width: 8vw;
+    height: 8vw;
+    padding-left: calc(50% - 50px);
+    //padding-top: 2em;
+}
+
+// @media screen and (max-width: 800px){
+//     .entete__header{
+//         background-position: center;
+//     }
+// }

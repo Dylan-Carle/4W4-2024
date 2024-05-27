@@ -1,0 +1,50 @@
+.recherche{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 2rem;
+    @media screen and (min-width: 700px){
+        width: 60vw;
+        height: 3rem;
+    }
+}
+.recherche__input{
+    font-size: 10pt;
+    @media screen and (min-width: 700px){
+        font-size: 18pt;
+    }
+    display: block;
+    width: 60%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 10px;
+    transform: translateX(20%);
+    background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
+    transition: border 0.5s ease, font-size 0.5s ease, border-radius 0.5s ease, transform 0.5s ease, width 0.5s ease;
+}
+.recherche__input:hover, .recherche__input:hover ~ button{
+    background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+}
+.recherche__input:focus{
+    background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+    border: 2px solid var(--couleur-focus);
+    transform: translateX(0%);
+    width: 85%;
+    border-radius: 10px 0px 0px 10px;
+}
+.recherche__button{
+    width: 15%;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid black;
+    border-left: none;
+    background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
+    transform: translateX(-100%);
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.recherche__input:focus ~ button{
+    transform: translateX(0%);
+    background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-focus));
+}
