@@ -3,12 +3,58 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-.footer__section{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+}
+#footer h3{
+
+    font-size: 2rem;
+    @media screen and (min-width: 700px){
+        text-align: center;
+    }
+}
+
+#footer > p{
+    text-align: center;
+}
+#footer .sociaux{
+    justify-content: center;
+    gap: 2vw;
+    @media screen and (min-width: 700px){
+        justify-content: flex-start;
+        gap: 5vw;
+    }
+}
+.footer__section{
+    @media  screen and (min-width: 700px){
+        flex-direction: row;   
+        align-items: flex-start;     
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+.div_footer{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin: 3vw;
+    padding: 1vw;
+    @media  screen and (min-width: 700px){
+        width: 25vw;
+    }
+
+}
+.div_footer > .recherche{
+    width: 100%;
+    margin-left: 0;
+    
+    @media screen and (min-width: 700px){
+        width: 125%;
+        margin-left: -10%;
+    }
 }
 footer blockquote{
     width: 60vw;

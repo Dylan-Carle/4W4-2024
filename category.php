@@ -27,18 +27,6 @@
         </section>
     </div>
 
-    <div id="galerie" class="global diagonale">
-        <section class="galerie__section">
-            <h2>galerie</h2>
-        </section>
-    </div>
-    <div id="evenement" class="global">
-        <section class="evenement__section">
-            <h2>evenement</h2>
-        </section>
-        <?php //get_template_part("gabarit/vague"); ?>
-    </div>
-
     <?php get_footer(); ?>
 </body>
 </html>

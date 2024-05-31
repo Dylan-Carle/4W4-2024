@@ -1,16 +1,23 @@
 .sociaux{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 5vw;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .sociaux > a > svg{
     fill: white;
-    width: 2rem;
-    height: 2rem;
+    width: 1em;
+    height: 1em;
     transform: scale(1);
     transition: transform 0.5s ease, fill 0.5s ease;
+
+    @media screen and (min-width: 700px){
+        width: 2em;
+        height: 2em;
+    }
 }
 
 .sociaux > a > svg:hover{
