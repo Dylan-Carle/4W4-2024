@@ -7,11 +7,23 @@
 .entete__header span{
     display: block;
 }
+.logo__entete > a{
+    width: 8vw;
+    height: 8vw;
+    margin-left: 10rem;
+    max-width: 70px;
+    max-height: 70px;
 
+    @media screen and (max-width: 700px){
+        margin-left: 4rem;
+    }
+}
 .custom-logo{
     width: 8vw;
     height: 8vw;
-    padding-left: calc(50% - 50px);
+    //padding-left: 10rem;
+    max-width: 70px;
+    max-height: 70px;
     //padding-top: 2em;
 }
 

@@ -57,9 +57,11 @@
 }
 
 .carte p a:hover::before{
-    left: 0%;
-    right: 0%;
-    background-color: var(--couleur-acceuil);
+    @media screen and (min-width: 700px){
+        left: 0%;
+        right: 0%;
+        background-color: var(--couleur-acceuil);
+    }
 }
 .post-categories li{
     width: 30%;
@@ -79,7 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 .post-categories a:hover{
     background-color: white;
@@ -92,15 +94,17 @@
     background-size: auto 150%;
     filter: grayscale(0%);
     box-shadow: inset 0px 0px 15px white;
-    transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
 
     @media screen and (min-width: 700px){
         filter: grayscale(100%);
+        transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
     }
 }
 .categorie:hover{
-    background-size: auto 100%;
-    filter: grayscale(0%);
+    @media screen and (min-width: 700px){
+        background-size: auto 100%;
+        filter: grayscale(0%);
+    }
 }
 .categorie:first-of-type{
     background-image: url("../images/aventure.jpg");

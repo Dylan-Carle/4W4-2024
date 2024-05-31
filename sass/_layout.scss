@@ -13,13 +13,16 @@ body{
     //min-height: 30vh;
 }
 
-.global > section,
-.global > footer{
-    flex: 0 1 var(--largeurMax);
+.global > section{
+    flex: 0 1 1500px;
     /*border: 1px solid black;*/
     /*background-color: rgba(255, 255, 255, 0.1);*/
     padding: 5rem 1rem;
     border-radius: 10px;
+}
+.global > footer{
+    padding: 5rem 1rem;
+    border-radius: 10px; 
 }
 .entete__menu, .entete__header{
     flex: 0 1 1300px;

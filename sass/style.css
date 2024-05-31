@@ -278,11 +278,15 @@ body {
   justify-content: center;
 }
 
-.global > section,
-.global > footer {
-  flex: 0 1 var(--largeurMax);
+.global > section {
+  flex: 0 1 1500px;
   /*border: 1px solid black;*/
   /*background-color: rgba(255, 255, 255, 0.1);*/
+  padding: 5rem 1rem;
+  border-radius: 10px;
+}
+
+.global > footer {
   padding: 5rem 1rem;
   border-radius: 10px;
 }
@@ -426,10 +430,24 @@ blockquote p {
   display: block;
 }
 
+.logo__entete > a {
+  width: 8vw;
+  height: 8vw;
+  margin-left: 10rem;
+  max-width: 70px;
+  max-height: 70px;
+}
+@media screen and (max-width: 700px) {
+  .logo__entete > a {
+    margin-left: 4rem;
+  }
+}
+
 .custom-logo {
   width: 8vw;
   height: 8vw;
-  padding-left: calc(50% - 50px);
+  max-width: 70px;
+  max-height: 70px;
 }
 
 a {
@@ -507,7 +525,7 @@ a:focus {
 }
 
 .youtube {
-  width: 20vw;
+  width: 100%;
   height: 10vh;
   transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
   background-color: var(--couleur-arriere-boutons);
@@ -515,12 +533,12 @@ a:focus {
 }
 
 .github {
-  width: 20vw;
+  width: 100%;
   height: 10vh;
   transition: transform 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease, border 0.5s ease;
   background-color: var(--couleur-arriere-boutons);
   border: 2px solid var(--couleur-arriere-boutons);
-  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 .youtube:hover, .github:hover {
@@ -533,7 +551,8 @@ a:focus {
 
 .lesBoutons {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /********** Entete *************/
@@ -545,7 +564,7 @@ a:focus {
   justify-content: center;
   height: 2rem;
   font-size: clamp(0.2rem, 0.4375rem + 1vw, 1.2rem);
-  border: 2px solid var(--couleur-arriere-entete);
+  border: 2px solid var(--couleur-entete);
   transform: scale(1) translateY(0px);
   color: black;
   border-radius: 10px;
@@ -581,7 +600,7 @@ a:focus {
 .recherche {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 50vw;
   height: 2rem;
 }
 @media screen and (min-width: 700px) {
@@ -599,7 +618,7 @@ a:focus {
   padding-right: 1rem;
   border: 1px solid black;
   border-right: none;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   transform: translateX(20%);
   background: linear-gradient(180deg, var(--couleur-arriere-boutons-bas), var(--couleur-arriere-boutons-haut));
   transition: border 0.5s ease, font-size 0.5s ease, border-radius 0.5s ease, transform 0.5s ease, width 0.5s ease;
@@ -640,17 +659,25 @@ a:focus {
 
 .sociaux {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 5vw;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .sociaux > a > svg {
   fill: white;
-  width: 2rem;
-  height: 2rem;
+  width: 1em;
+  height: 1em;
   transform: scale(1);
   transition: transform 0.5s ease, fill 0.5s ease;
+}
+@media screen and (min-width: 700px) {
+  .sociaux > a > svg {
+    width: 2em;
+    height: 2em;
+  }
 }
 
 .sociaux > a > svg:hover {
@@ -664,13 +691,70 @@ a:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer h3 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 700px) {
+  #footer h3 {
+    text-align: center;
+  }
+}
+
+#footer > p {
+  text-align: center;
+}
+
+#footer .sociaux {
+  justify-content: center;
+  gap: 2vw;
+}
+@media screen and (min-width: 700px) {
+  #footer .sociaux {
+    justify-content: flex-start;
+    gap: 5vw;
+  }
 }
 
 .footer__section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 700px) {
+  .footer__section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.div_footer {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  margin: 3vw;
+  padding: 1vw;
+}
+@media screen and (min-width: 700px) {
+  .div_footer {
+    width: 25vw;
+  }
+}
+
+.div_footer > .recherche {
+  width: 100%;
+  margin-left: 0;
+}
+@media screen and (min-width: 700px) {
+  .div_footer > .recherche {
+    width: 125%;
+    margin-left: -10%;
+  }
 }
 
 footer blockquote {
@@ -747,10 +831,12 @@ footer blockquote {
   transition: left 0.2s ease, right 0.2s ease;
 }
 
-.carte p a:hover::before {
-  left: 0%;
-  right: 0%;
-  background-color: var(--couleur-acceuil);
+@media screen and (min-width: 700px) {
+  .carte p a:hover::before {
+    left: 0%;
+    right: 0%;
+    background-color: var(--couleur-acceuil);
+  }
 }
 
 .post-categories li {
@@ -772,7 +858,7 @@ footer blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 
 .post-categories a:hover {
@@ -786,17 +872,19 @@ footer blockquote {
   background-size: auto 150%;
   filter: grayscale(0%);
   box-shadow: inset 0px 0px 15px white;
-  transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
 }
 @media screen and (min-width: 700px) {
   .categorie {
     filter: grayscale(100%);
+    transition: background-size 0.5s ease, transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
   }
 }
 
-.categorie:hover {
-  background-size: auto 100%;
-  filter: grayscale(0%);
+@media screen and (min-width: 700px) {
+  .categorie:hover {
+    background-size: auto 100%;
+    filter: grayscale(0%);
+  }
 }
 
 .categorie:first-of-type {
@@ -913,7 +1001,7 @@ footer blockquote {
 }
 
 #menu-footer li {
-  width: 50vw;
+  width: 100%;
   height: 20vh;
   border-radius: 10px;
   background-position: center;
@@ -926,7 +1014,6 @@ footer blockquote {
 @media screen and (min-width: 700px) {
   #menu-footer li {
     height: 20vh;
-    width: 18vw;
   }
 }
 
@@ -995,7 +1082,7 @@ footer blockquote {
   top: 0px;
   left: 0;
   z-index: 10;
-  height: 10%;
+  height: 15%;
   width: 10%;
   min-width: 2em;
 }
